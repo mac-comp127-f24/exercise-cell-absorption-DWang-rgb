@@ -7,6 +7,8 @@ import edu.macalester.graphics.CanvasWindow;
 import edu.macalester.graphics.Ellipse;
 import edu.macalester.graphics.Point;
 
+//extracted cell class
+
 public class Cell {
     private static final double
         WIGGLINESS = 0.2,
