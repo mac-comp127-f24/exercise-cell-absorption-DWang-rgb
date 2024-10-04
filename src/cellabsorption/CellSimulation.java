@@ -1,6 +1,8 @@
 package cellabsorption;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import edu.macalester.graphics.CanvasWindow;
@@ -11,7 +13,7 @@ import edu.macalester.graphics.Point;
 public class CellSimulation {
     
 
-    private Cell cell;
+    private List<Cell> cells;
     private CanvasWindow canvas;
     private Random rand = new Random();
     
@@ -37,7 +39,10 @@ public class CellSimulation {
     }
 
     private void populateCell() {
+        cells = new ArrayList<>();
         double size = rand.nextInt(5) + 2;
+        for (double i == 0; i <= 200; i ++) {}
+        
         cell = new Cell(
             rand.nextDouble() * (canvas.getWidth() - size),
             rand.nextDouble() * (canvas.getWidth() - size),
@@ -45,6 +50,7 @@ public class CellSimulation {
             Color.getHSBColor(rand.nextFloat(), rand.nextFloat() * 0.5f + 0.1f, 1));
         Ellipse theShape = cell.getShape();
         canvas.add(theShape);
+        
     }    
     
     private static double sqr(double x) {
