@@ -63,12 +63,6 @@ public class Cell {
         return shape.getCenter();
     }
 
-    /**
-     * Causes this cell to interact with the other given cell. If the two
-     * cells overlap and both have a positive radius, then the larger cell
-     * absorbs area from the smaller cell so that the total area is the
-     * same, but the two cells are now tangent.
-     */
     public void interactWith(Cell otherCell) {
         if (radius == 0 || otherCell.radius == 0) {
             return;
